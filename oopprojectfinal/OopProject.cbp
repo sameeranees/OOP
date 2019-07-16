@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OopProject" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/OopProject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/OopProject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Aircraft.cpp" />
+		<Unit filename="Aircraft.h" />
+		<Unit filename="AircraftProjectile.cpp" />
+		<Unit filename="AircraftProjectile.h" />
+		<Unit filename="Cannon.cpp" />
+		<Unit filename="Cannon.h" />
+		<Unit filename="CannonBall.cpp" />
+		<Unit filename="CannonBall.h" />
+		<Unit filename="ElectricCannon.cpp" />
+		<Unit filename="ElectricCannon.h" />
+		<Unit filename="Electricity.cpp" />
+		<Unit filename="Electricity.h" />
+		<Unit filename="Enemy.cpp" />
+		<Unit filename="Enemy.h" />
+		<Unit filename="Explosion.cpp" />
+		<Unit filename="Explosion.h" />
+		<Unit filename="GameManager.cpp" />
+		<Unit filename="GameManager.h" />
+		<Unit filename="GameObject.cpp" />
+		<Unit filename="GameObject.h" />
+		<Unit filename="GameOverScreen.cpp" />
+		<Unit filename="GameOverScreen.h" />
+		<Unit filename="Grass.cpp" />
+		<Unit filename="Grass.h" />
+		<Unit filename="HealthBar.cpp" />
+		<Unit filename="HealthBar.h" />
+		<Unit filename="InstructionText.cpp" />
+		<Unit filename="InstructionText.h" />
+		<Unit filename="LTexture.cpp" />
+		<Unit filename="LTexture.h" />
+		<Unit filename="LinkedList.cpp" />
+		<Unit filename="LinkedList.h" />
+		<Unit filename="Node.h" />
+		<Unit filename="Path.cpp" />
+		<Unit filename="Path.h" />
+		<Unit filename="RocketBall.cpp" />
+		<Unit filename="RocketBall.h" />
+		<Unit filename="RocketTurret.cpp" />
+		<Unit filename="RocketTurret.h" />
+		<Unit filename="Soldier.cpp" />
+		<Unit filename="Soldier.h" />
+		<Unit filename="SoldierProjectile.cpp" />
+		<Unit filename="SoldierProjectile.h" />
+		<Unit filename="Sound.cpp" />
+		<Unit filename="Sound.h" />
+		<Unit filename="Tanks.cpp" />
+		<Unit filename="Tanks.h" />
+		<Unit filename="TanksProjectile.cpp" />
+		<Unit filename="TanksProjectile.h" />
+		<Unit filename="Throne.cpp" />
+		<Unit filename="Throne.h" />
+		<Unit filename="Tile.cpp" />
+		<Unit filename="Tile.h" />
+		<Unit filename="Tower.cpp" />
+		<Unit filename="Tower.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

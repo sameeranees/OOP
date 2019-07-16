@@ -1,0 +1,18 @@
+Throne
+8500 97
+Cannon
+854 146 -500
+Cannon
+866 269 -500
+Cannon
+478 291 -500
+ElectricCannon
+346 558 -2000
+Soldier
+384 422 1
+Aircraft
+404 192 1
+Soldier
+201 639 1
+Tank
+0.5 639.5 3

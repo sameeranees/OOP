@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1506074230 source:c:\users\sj02732\downloads\midterm01\question1\main.cpp
+	<iostream>
+
+1506075272 source:c:\users\sj02732\downloads\midterm01\question1\point.cpp
+	<iostream>
+	"Point.h"
+
+1506074693 c:\users\sj02732\downloads\midterm01\question1\point.h
+	<iostream>
+

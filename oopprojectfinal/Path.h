@@ -1,0 +1,22 @@
+#pragma once
+#include <SDL.h>
+#include <SDL_image.h>
+#include <stdio.h>
+#include <iostream>
+#include"LTexture.h"
+#include "Tile.h"
+class Path:public Tile
+{
+private:
+    float x;
+    float y;
+    int width;
+    int height;
+    SDL_Rect spriteClips[1];
+    LTexture* spriteSheetTexture;
+public:
+    Path(LTexture* image, float x, float y);
+    Path();
+    ~Path();
+    void Draw(SDL_Renderer *gRenderer);
+};

@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <help_text>/GameObject/
+--
+# spriteClips:SDL_Rect
+# width: int
+# height: int
+--
++ GameObject(LTexture*, float, float)
++ ~GameObject()
++ Update(): void
++ Render(SDL_Renderer*: void)
++ GetDestroyed(): void
+bg=cyan</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>56</y>
+      <w>77</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>GameManager
+-
++ New():void
++ Save():void
++ Load():void
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>70</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>uses &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>98</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>49</y>
+      <w>210</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>LinkedList
+-
++ List()
++ List(const &amp;List)
++ ~List()
++ Push(GameObject*): void
++ Delete(GameObject*): void
++ Size(): void
++ Clear(): void
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>0</y>
+      <w>217</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>/GameObject/
+--
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+--
++ GameObject(LTexture* image, float x, float y)
++GameObject()
++ ~GameObject()
++ Update(): void
+/+Draw(SDL Renderer *grenderer):void/
+
+
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>518</x>
+      <y>182</y>
+      <w>196</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>/Tile/
+-
+- tile: int [ ] [ ]
+-
++ Tile()
++ ~Tile()
+/+ Draw(SDL_Renderer * grenderer):void/
++ isGrass(): bool
++ isPath(): bool
++ShowTile():int
+
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>280</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>280</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>343</y>
+      <w>196</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Grass
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++ Grass(LTexture* image, float x, float y)
++Grass
++ ~Grass()
++ Draw(SDL_Renderer * grenderer):void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>336</y>
+      <w>154</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+&lt; contains</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>133</x>
+      <y>315</y>
+      <w>182</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>/Tower/
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Tower(LTexture* image, float x, float y)
++Tower()
++~Tower()
+/+Draw(SDL Renderer *grenderer):void/
+/+Attack():void/
+/+UseMoney():void/
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>833</x>
+      <y>399</y>
+      <w>119</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+contains &gt;</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>938</x>
+      <y>343</y>
+      <w>189</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Enemy
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++ Enemy(LTexture* image, float x, float y)
++Enemy()
++ ~Enemy()
+/+Draw(SDL Renderer *grenderer):void/
+/+ Attack():void/
+/+ GetDestroyed():void/
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>357</y>
+      <w>182</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Path
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++ Path(LTexture* image, float x, float y)
++ Path()
++ ~Path()
++ Draw(SDL_Renderer * grenderer):void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>511</y>
+      <w>189</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Cannon
+bg=red
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-cost:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Cannon(LTexture* image, float x, float y)
++Cannon()
++~Cannon
++Draw(SDL Renderer *grenderer):void
++Attack():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>511</y>
+      <w>189</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Arrow
+bg=red
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-cost:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Arrow(LTexture* image, float x, float y)
++Arrow()
++~Arrow()
++Attack():void
++Draw(SDL Renderer *grenderer):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>511</y>
+      <w>196</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Electricity
+bg=red
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-cost:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Electricity(LTexture* image, float x, float y)
++Electricity()
++~Electricity()
++Attack():void
++Draw(SDL Renderer *grenderer):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>56</x>
+      <y>665</y>
+      <w>49</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=0..*
+fires &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>35</x>
+      <y>721</y>
+      <w>84</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>CannonBall
+-
++Render():void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>721</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Arrow
+-
++Render():void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>721</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Electricity
+-
++Render():void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>749</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>784</y>
+      <w>70</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Projectile
+-
+-x:float
+-y:float
+-
++ Hit():void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>637</x>
+      <y>546</y>
+      <w>126</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>EnemyProjectile
+-
+-x:float
+-y:float
+-
++Hit():void
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>469</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>665</y>
+      <w>49</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=0..*
+fires &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>665</y>
+      <w>49</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=0..*
+fires &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>595</y>
+      <w>448</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;240.0;620.0;240.0;620.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>63</x>
+      <y>749</y>
+      <w>238</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0;320.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>539</w>
+      <h>812</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>750.0;10.0;10.0;10.0;10.0;1140.0;350.0;1140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>105</y>
+      <w>196</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>Throne
+-
+-Health:int
+-Money: int
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Throne(LTexture* image, float x, float y)
++Throne()
++~Throne()
++DecreaseHealth():void
++DecreaseMoney(Tower*):void
++ShowHealth():void
++Draw(SDL Renderer *grenderer):void
+bg=red
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>574</y>
+      <w>189</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Aircrafts
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Aircraft(LTexture* image, float x, float y)
++Aircraft()
++~Aircraft()
++Draw(SDL Renderer *grenderer):void
++Attack():void
++GetDestroyed():void
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>574</y>
+      <w>182</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Soldiers
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Soldier(LTexture* image, float x, float y)
++Soldier()
++~Soldier()
++Draw(SDL Renderer *grenderer):void
++Attack():void
++GetDestroyed():void
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>875</x>
+      <y>294</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+attacked by &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1169</x>
+      <y>574</y>
+      <w>182</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>Tanks
+-
+-x:float
+-y:float
+-width:int
+-height:int
+-spriteclips:SDL Rect
+-spritesheetTexture:Ltexture*
+-
++Tank(LTexture* image, float x, float y)
++Tank()
++~Tank()
++Draw(SDL Renderer *grenderer):void
++Attack():void
++GetDestroyed():void
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>497</y>
+      <w>28</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;20.0;80.0;20.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>546</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;40.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>931</x>
+      <y>539</y>
+      <w>294</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;400.0;20.0;400.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>490</y>
+      <w>196</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+fires </panel_attributes>
+    <additional_attributes>10.0;100.0;130.0;100.0;130.0;10.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>49</x>
+      <y>497</y>
+      <w>238</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;10.0;10.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>490</y>
+      <w>175</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>301</x>
+      <y>497</y>
+      <w>21</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>497</y>
+      <w>21</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>749</y>
+      <w>21</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>203</x>
+      <y>126</y>
+      <w>336</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>460.0;10.0;420.0;10.0;420.0;90.0;10.0;90.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>84</y>
+      <w>350</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;480.0;10.0;480.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>28</x>
+      <y>210</y>
+      <w>168</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Tower will be placed to protect the
+Throne from Enemy. Tower will be
+of three types. Each type can fire a 
+projectile to kill the Enemy and
+prevent it from reaching the Throne.
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>315</x>
+      <y>231</y>
+      <w>168</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Tile is the basic grid covering our 
+screen. It is an abstract class. Tile
+can be Grass or Path. Tower can be
+placed on Grass only, and Enemy
+can walk on Path only
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1162</x>
+      <y>371</y>
+      <w>203</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Enemy will march towards Throne and once 
+closes down, it will fire projectile to decrease
+the Throne health. There are three types of
+enemies, each with their own projectile. 
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>42</y>
+      <w>126</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0;130.0;170.0;160.0;170.0</additional_attributes>
+  </element>
+</diagram>
